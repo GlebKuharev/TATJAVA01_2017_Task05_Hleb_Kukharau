@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu xmlns ="http://www.epam.com/menu"
+      xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.epam.com/menu NewXMLSchema.xsd">
+	
+	<menuSection name="холодные закуски">
+	
+		<menuSimpleItem>
+			<menuItemPic>http://example.com/pictures/1.jpg</menuItemPic>
+			<menuItemName>Ассорти рыбное</menuItemName>
+			<menuItemDescription>Слабосоленая форель, семга</menuItemDescription>
+			<menuItemPortion>100/20/15</menuItemPortion>
+			<menuItemPrice>0</menuItemPrice>
+		</menuSimpleItem>
+		
+		<menuSimpleItem>
+			<menuItemPic>http://example.com/pictures/2.jpg</menuItemPic>
+			<menuItemName>Тарталетки с красной икрой</menuItemName>
+			<menuItemDescription>Тарталетки с красной икрой</menuItemDescription>
+			<menuItemPortion>60/50</menuItemPortion>
+			<menuItemPrice>0</menuItemPrice>
+		</menuSimpleItem>
+		
+		<menuComplexItem>
+			<menuItemPic>http://example.com/pictures/3.jpg</menuItemPic>
+			<menuItemName>Ассорти баклажаны</menuItemName>
+			<menuItemDescription>Жареные баклажаны</menuItemDescription>
+			<menuComplexItemChoice>
+				<choiceName>1. с помидорами</choiceName>
+				<price>0</price>
+			</menuComplexItemChoice>
+			<menuComplexItemChoice>
+				<choiceName>2. с чесноком</choiceName>
+				<price>0</price>
+			</menuComplexItemChoice>
+			<menuComplexItemChoice>
+				<choiceName>3. с орехами</choiceName>
+				<price>0</price>
+			</menuComplexItemChoice>
+			<menuItemPortion>100/5</menuItemPortion>
+		</menuComplexItem>
+	</menuSection>
+	
+	<menuSection name="горячие закуски">
+	
+		<menuSimpleItem>
+			<menuItemPic>http://example.com/pictures/101.jpg</menuItemPic>
+			<menuItemName>Лобио с шампиньонами</menuItemName>
+			<menuItemDescription>Фасоль с шампиньонами и грецким орехом</menuItemDescription>
+			<menuItemPortion>150/5</menuItemPortion>
+			<menuItemPrice>105</menuItemPrice>
+		</menuSimpleItem>
+		
+	</menuSection>
+	
+	<menuSection name="завтраки">
+	
+		<menuSimpleItem>
+			<menuItemPic>http://example.com/pictures/1001.jpg</menuItemPic>
+			<menuItemName>Глазунья</menuItemName>
+			<menuItemDescription>2 яйца (на выбор: ветчина, сыр, помидоры)</menuItemDescription>
+			<menuItemPortion>150</menuItemPortion>
+			<menuItemPrice>0</menuItemPrice>
+		</menuSimpleItem>
+		
+	</menuSection>
+	
+</menu>
