@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.epam.com/menu"
+        xmlns:tns="http://www.epam.com/menu"
+        elementFormDefault="qualified"
+        attributeFormDefault="unqualified">
+ 
+<element name="menu">
+	<complexType>
+		<sequence>
+			<element name="menuSection" type="tns:menuSectionType" minOccurs="1" maxOccurs="unbounded"/>
+		</sequence>
+	</complexType>
+</element>
+
+<complexType name="menuSectionType">
+	<sequence>
+		<element name="menuSimpleItem" type="tns:menuSimpleItemType" minOccurs="0" maxOccurs="unbounded"/>
+		<element name="menuComplexItem" type="tns:menuComplexItemType" minOccurs="0" maxOccurs="unbounded"/>
+	</sequence>
+	<attribute name="name" type="tns:menuSectionNameType" use="required"/>
+</complexType>
+
+<simpleType name="menuSectionNameType">
+	<restriction base="string">
+		<enumeration value="холодные закуски"/>
+		<enumeration value="горячие закуски"/>
+		<enumeration value="завтраки"/>
+		<enumeration value="салаты"/>
+	</restriction>
+</simpleType>
+
+<complexType name="menuSimpleItemType">
+	<sequence>
+		<element name="menuItemPic" type="string"/>
+		<element name="menuItemName" type="string"/>
+		<element name="menuItemDescription" type="string"/>
+		<element name="menuItemPortion" type="string"/>
+		<element name="menuItemPrice" type="int"/>
+	</sequence>
+</complexType>
+
+<complexType name="menuComplexItemType">
+	<sequence>
+		<element name="menuItemPic" type="string"/>
+		<element name="menuItemName" type="string"/>
+		<element name="menuItemDescription" type="string"/>
+		<sequence>
+			<element name="menuComplexItemChoice" type="tns:menuComplexItemChoiceType" minOccurs="1" maxOccurs="unbounded"/>
+		</sequence>
+		<element name="menuItemPortion" type="string"/>
+	</sequence>
+</complexType>
+
+<complexType name="menuComplexItemChoiceType">
+	<sequence>
+		<element name="choiceName" type="string"/>
+		<element name="price" type="int"/>
+	</sequence>
+</complexType>
+
+</schema>
