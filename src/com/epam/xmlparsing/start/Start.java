@@ -1,20 +1,13 @@
-package start;
+package com.epam.xmlparsing.start;
 
 import java.util.List;
 
-
-import bean.MenuSection;
-import parsers.dom.DOMMenuParser;
-import parsers.sax.SAXParser;
-import parsers.stax.StAXParser;
+import com.epam.xmlparsing.menu_objects.MenuSection;
+import com.epam.xmlparsing.parsers.dom.DOMMenuParser;
+import com.epam.xmlparsing.parsers.sax.SAXParser;
+import com.epam.xmlparsing.parsers.stax.StAXParser;
 
 public class Start {
-
-	public static void printMenu(List<MenuSection> menu){
-		for (int i = 0; i < menu.size(); i++){
-			System.out.println(menu.get(i).toString());
-		}
-	}
 
 	public static void main(String[] args) {
 
@@ -32,6 +25,12 @@ public class Start {
 		System.out.println("By DOM:");
 		printMenu(menu);
 
+	}
+	
+	public static void printMenu(List<MenuSection> menu){
+		for (int i = 0; i < menu.size(); i++){
+			System.out.println(menu.get(i));
+		}
 	}
 
 }

@@ -1,4 +1,4 @@
-package parsers.stax;
+package com.epam.xmlparsing.parsers.stax;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -11,12 +11,12 @@ import javax.xml.stream.XMLStreamConstants;
 import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.XMLStreamReader;
 
-import bean.MenuComplexItem;
-import bean.MenuItem;
-import bean.MenuSection;
-import bean.MenuSimpleItem;
-import bean.TagName;
-import bean.MenuComplexItem.MenuComplexItemChoice;
+import com.epam.xmlparsing.menu_objects.MenuComplexItem;
+import com.epam.xmlparsing.menu_objects.MenuItem;
+import com.epam.xmlparsing.menu_objects.MenuSection;
+import com.epam.xmlparsing.menu_objects.MenuSimpleItem;
+import com.epam.xmlparsing.menu_objects.MenuComplexItem.MenuComplexItemChoice;
+import com.epam.xmlparsing.utils.TagName;
 
 public class StAXParser {
 
@@ -37,7 +37,9 @@ public class StAXParser {
 	}
 
 	private static List<MenuSection> process(XMLStreamReader reader) throws XMLStreamException{
+		
 		List<MenuSection> menu = new ArrayList<MenuSection>();
+		
 		MenuSection menuSection = null;
 		MenuSimpleItem menuSimpleItem = null;
 		MenuComplexItem menuComplexItem = null;

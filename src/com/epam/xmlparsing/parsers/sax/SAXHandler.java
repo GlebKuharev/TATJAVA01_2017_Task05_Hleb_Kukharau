@@ -1,4 +1,4 @@
-package parsers.sax;
+package com.epam.xmlparsing.parsers.sax;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,12 +7,12 @@ import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
-import bean.MenuComplexItem;
-import bean.MenuComplexItem.MenuComplexItemChoice;
-import bean.MenuItem;
-import bean.MenuSection;
-import bean.MenuSimpleItem;
-import bean.TagName;
+import com.epam.xmlparsing.menu_objects.MenuComplexItem;
+import com.epam.xmlparsing.menu_objects.MenuItem;
+import com.epam.xmlparsing.menu_objects.MenuSection;
+import com.epam.xmlparsing.menu_objects.MenuSimpleItem;
+import com.epam.xmlparsing.menu_objects.MenuComplexItem.MenuComplexItemChoice;
+import com.epam.xmlparsing.utils.TagName;
 
 public class SAXHandler extends DefaultHandler {
 
@@ -33,7 +33,7 @@ public class SAXHandler extends DefaultHandler {
 
 		text = new StringBuilder();
 
-		TagName tag = TagName.valueOf(qName.toUpperCase());
+		TagName tag = TagName.valueOf(qName.toUpperCase()); 
 
 		switch(tag) {
 
@@ -50,10 +50,7 @@ public class SAXHandler extends DefaultHandler {
 		case MENUCOMPLEXITEMCHOICE:
 			menuComplexItemChoice = menuComplexItem.new MenuComplexItemChoice();
 			break;
-		default:
-			break;
 		}
-
 	}
 
 	public void characters(char[] buffer, int start, int length){
@@ -109,8 +106,6 @@ public class SAXHandler extends DefaultHandler {
 			break;
 		case MENUSECTION:
 			menu.add(menuSection);
-			break;
-		default:
 			break;
 		}
 	}

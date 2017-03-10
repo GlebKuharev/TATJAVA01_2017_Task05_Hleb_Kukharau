@@ -1,4 +1,4 @@
-package bean;
+package com.epam.xmlparsing.menu_objects;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package bean;
+package com.epam.xmlparsing.utils;
 
 public enum TagName {
 	

@@ -1,4 +1,4 @@
-package bean;
+package com.epam.xmlparsing.menu_objects;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,7 +17,6 @@ public class MenuComplexItem extends MenuItem {
 	}
 
 	public MenuComplexItem() {
-		super();
 		complexItemChoiceList = new ArrayList<MenuComplexItemChoice>();
 	}
 
@@ -35,12 +34,12 @@ public class MenuComplexItem extends MenuItem {
 		private int price;
 
 		public MenuComplexItemChoice(String choiceName, int price) {
+			super();
 			this.choiceName = choiceName;
 			this.price = price;
 		}
 
 		public MenuComplexItemChoice() {
-			super();
 		}
 
 		public String getChoiceName() {
@@ -63,9 +62,7 @@ public class MenuComplexItem extends MenuItem {
 		public String toString() {
 			return "menuComplexItemChoice [choiceName=" + choiceName + ", price=" + price + "]";
 		}
-
 	}
-
 
 	@Override
 	public String toString() {
@@ -73,6 +70,4 @@ public class MenuComplexItem extends MenuItem {
 				+ ", menuItemDescription=" + menuItemDescription + ", menuItemPortion=" + menuItemPortion
 				+ ", complexItemChoiceList=" + complexItemChoiceList + "]";
 	}
-
-
 }

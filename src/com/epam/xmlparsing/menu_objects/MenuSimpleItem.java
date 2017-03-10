@@ -1,4 +1,4 @@
-package bean;
+package com.epam.xmlparsing.menu_objects;
 
 public class MenuSimpleItem extends MenuItem {
 	
